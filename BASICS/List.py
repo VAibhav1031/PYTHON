@@ -780,16 +780,114 @@
 # # according to  your  need
 
 
-from collections import Counter
 
-def most_common_element(lst):
-    counter = Counter(lst)
-    most_common = counter.most_common(1)
-    return most_common[0][0] if most_common else None
-
-# Example usage:
-my_list=[5,6,8,2,8,2,6,2,3,5,2,2]
-result = most_common_element(my_list)
-print("Most common element:", result)
+# # WAPP to find the item with most ocurrences in a given list.
+# # Original list:
+# # [2, 3, 8, 4, 7, 9, 8, 2, 6, 5, 1, 6, 1, 2, 3, 4, 6, 9, 1, 2]
+# # Item with maximum occurrences of the said list:
+# # 2
 
 
+# from collections import Counter
+
+# def most_common_element(lst):
+#     counter = Counter(lst) # Make the dictionry of the(list,tuple) to whick  key are elements(of tuple,list) and  value are the number of occurence
+#     most_common = counter.most_common(1) # this  return the  list having element as a tuple
+#     print(most_common) # here  by this  you will see that  it  have  that dict thing in tuple  form
+#     return most_common[0][0] if most_common else None
+
+# # Example usage:
+# my_list=[5,6,8,2,8,2,6,2,3,5,2,2]
+# result = most_common_element(my_list)
+# print("Most common element:", result)
+
+
+# # WAPP to acess multiple elements at a specified index from a given list
+
+# org_li=[2, 3, 8, 4, 7, 9, 8, 2, 6, 5, 1, 6, 1, 2, 3, 4, 6, 9, 1, 2]
+
+# def list_index(lis,index_lis):
+#     return[lis[i] for i in index_lis]
+
+
+# list_in=[0,3,5,7,10]
+# print(list_index(org_li,list_in))
+
+# # WAPP to extract the nth element from a given list of tuples.
+# # Original list:
+# # [('Greyson Fulton', 98, 99), ('Brady Kent', 97, 96), ('Wyatt Knott', 91, 94), ('Beau Turnbull', 94, 98)]
+# # Extract nth element ( n = 0 ) from the said list of tuples:
+# # ['Greyson Fulton', 'Brady Kent', 'Wyatt Knott', 'Beau Turnbull']
+# # Extract nth element ( n = 2 ) from the said list of tuples:
+# # [99, 96, 94, 98]
+
+
+
+# l=[('Greyson Fulton', 98, 99), ('Brady Kent', 97, 96), ('Wyatt Knott', 91, 94), ('Beau Turnbull', 94, 98)]
+
+# def re_nth(lis,n):
+#     if(n==0):
+#         return[d[0] for d in lis]
+#     elif(n==1):
+#         return[d[1] for d in lis]
+#     else:
+#         return[d[n] for d in lis]
+    
+
+# print(re_nth(l,2))
+    
+
+
+# WAPP that takes a list of integers and finds all pairs of integers that differ by three. Return all pairs of integers in a list.
+# Sample Data:
+# ([0, 3, 4, 7, 9]) -> [[0, 3], [4, 7]]
+# [0, -3, -5, -7, -8] -> [[-3, 0], [-8, -5]]
+# ([1, 2, 3, 4, 5]) -> [[1, 4], [2, 5]]
+# ([100, 102, 103, 114, 115]) -> [[100, 103]]
+
+# def find_pairs_differ_by_three(lst):
+#     pairs = []
+#     for i in range(len(lst)):
+#         for j in range(i + 1, len(lst)):
+#             if abs(lst[i] - lst[j]) == 3:
+#                 pairs.append([lst[i], lst[j]])
+#     return pairs
+
+# # Sample Data
+# sample_data = [
+#     [0, 3, 4, 7, 9],
+#     [0, -3, -5, -7, -8],
+#     [1, 2, 3, 4, 5],
+#     [100, 102, 103, 114, 115]
+# ]
+
+# # Test the function with sample data
+# for i, data in enumerate(sample_data, start=1):
+#     print(f"{i}. {data} -> {find_pairs_differ_by_three(data)}")
+
+
+
+# # WAPP  extract the first specified number of vowels from a given string. If the specified number is less than the number of vowels present in the string then display "n is less than the number of vowels present in the string".
+# # Sample Data:
+# # ("Python", 2) -> "n is less than number of vowels present in the string."
+# # ("Python Exercises", 3) -> "oEe"
+# # ("aeiou") -> "AEI"
+
+
+
+# def  numb_vowels(lis,n):
+#     re=""
+
+#     for  i in lis:
+#         if i  in "aeiouAEIOU":
+#             re+=i
+
+#     return re[:n] if(len(re))>=n   else "n is less than specified vowels"
+
+
+# print(numb_vowels("python",2))
+# print(numb_vowels("Python Exercises",3))
+
+
+
+# WAPP
