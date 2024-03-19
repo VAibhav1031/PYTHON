@@ -890,4 +890,164 @@
 
 
 
-# WAPP
+# # WAPP to creating  a new  list  by dividing the  two  list ele 
+
+
+# def new_2(list1,list2):
+#     if (len(list1)==len(list2)):
+#         s=[x/y for x,y in zip(list1,list2)]
+#         return s
+#     else:
+#         return "Number of elements are not equal in the Lists" 
+
+# print(new_2([2,5,8,6,9],[2,3,5,7,9,2]))
+
+
+
+# # WAPP  to find common elements in a given list of lists.
+# # Original list:
+# # [[7, 2, 3, 4, 7], [9, 2, 3, 2, 5], [8, 2, 3, 4, 4]]
+# # Common elements of the said list of lists:
+# # [2, 3]
+
+# def commo(lis):
+    
+#     if not  lis:
+#         return []
+    
+#     common_elements=set(lis[0])
+
+#     for sublist in lis[1:]:
+#         common_elements.intersection_update(set(sublist))
+
+#     return list(common_elements)
+
+# orginal_lists=[
+#     [[7, 2, 3, 4, 7], [9, 2, 3, 2, 5], [8, 2, 3, 4, 4]],
+#     [['a', 'b', 'c'], ['b', 'c', 'd'], ['c', 'd', 'e']]
+# ]
+
+# for i in orginal_lists:
+#     print("Original list :")
+#     print(i)
+#     print("Common elements :")
+#     print(commo(i))
+
+    
+# # WAPP to reverse a given list of lists.
+# # so the thing  is to reverse the list of lists
+# l=[['orange', 'red'], ['green', 'blue'], ['white', 'black', 'pink']]
+
+# def rev(list):
+#     return[i[::-1]  for i in list]
+
+
+# print(rev(l))
+
+
+# # WAPP to reverse the strings at  particular   location  or  specified place
+
+# def rev_speci(num,start,end):
+#     l=[]
+#     for i in range(start,end+1):
+#         l.append(num[i])
+        
+
+#     l.reverse()
+    
+#     for i in range(start,end+1):
+#         num[i]=l[i-start]
+
+#     return num
+
+# original_lis=['a','b','c','d','e','f','g']
+# start=0
+# end=4
+# print("original list",original_lis)
+# print("Reversed at specified place",rev_speci(original_lis,start,end))
+
+
+# # find the  value of the  x  i know  you can ??????? :)
+# values=[[4,5,6,2],[44,7,2,3]]
+
+# x=values[0][0]
+
+# for row in range(0,len(values)):
+#     for column in range(0,len(values[row])):
+
+#         if x<values[row][column]:
+#             x=values[row][column]
+
+# print(x)
+
+
+
+
+# values=[[4,5,6,2],[44,7,2,3]]
+
+# for row in values:
+#     row.sort()   
+#     for element in row:
+#         print(element,end=" ")        
+#     print()
+                        
+
+# # WAPF to find the length of  the longest increasing sub-sequence in a list
+
+
+# def longest_increasing_sub(nums):
+#     n=len(nums)
+
+#     arr=[1]*n
+#     for i in range(1,n):
+#         for j in range(i):
+#             if nums[i]>nums[j]:
+#                 arr[i]=max(arr[i],arr[j]+1)
+
+#     return max(arr)
+
+# nums=[10,20,30,40,50,60,70,80]
+# nums=[]
+
+# print(longest_increasing_sub(nums))
+
+
+# WAPF  to finds all the permuatation of the members of a list.
+
+# def permutation(lis):
+#     if len(lis)==0:
+#         return [[]]
+#     elif len(lis)==1:
+#         return [lis]
+#     else:
+#         r=[]
+#         for i in range(len(lis)):
+#                 for j in permutation(lis[:i]+lis[i+1:]):
+#                      r.append([lis[i]]+j)
+#     return r
+
+# print(permutation([1,2,3,4]))
+    
+
+# def generate_permutations(lst):
+#     n = len(lst)
+#     c = [0] * n
+#     result = [lst[:]]  # Start with the original list as the first permutation
+
+#     i = 0
+#     while i < n:
+#         if c[i] < i:
+#             if i % 2 == 0:
+#                 lst[0], lst[i] = lst[i], lst[0]
+#             else:
+#                 lst[c[i]], lst[i] = lst[i], lst[c[i]]
+#             result.append(lst[:])  # Append the generated permutation
+#             c[i] += 1
+#             i = 0
+#         else:
+#             c[i] = 0
+#             i += 1
+
+#     return result
+
+# print(generate_permutations([1, 2, 3, 4]))
