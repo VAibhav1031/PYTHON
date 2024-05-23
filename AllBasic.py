@@ -51,11 +51,13 @@
 
 #     x+=1
 
+
 # mynum=[2,5,"hey"]
 # for num in  mynum:
-#     # here the  pass is used to avoid the  
-#     # return of error if we don't  know what to do in his
-#     pass  
+
+## here the  pass is used to avoid the  
+## return of error if we don't  know what to do in his
+#pass  
 
 # print("hey there man whatsupp!!!")
 
